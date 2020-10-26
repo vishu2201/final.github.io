@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sticky Header</title>
+	
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<style type="text/css">
+    header {
+    position: fixed;
+        top: 0px;
+    width: 100%;
+    background-color: #fff;
+
+ }
+</style>
+<script type="text/javascript">
+    var initialSrc = "Img_logo_blue.jpg";
+    var scrollSrc = "IMG_Academy_Logo.jpg";
+
+    $(window).scroll(function() {
+       var value = $(this).scrollTop();
+       if (value > 100)
+          $(".logo").attr("src", scrollSrc);
+       else
+          $(".logo").attr("src", initialSrc);
+    });
+</script>
+</head>
+<body>
+
+<header>
+    <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="navbar-header">
+    <a href="#top"><img class="logo" src="Img_logo_blue.jpg" width="150" height="40"></a>
+ </div>
+</nav>
+    <nav>
+        <a class="nav__link" href="#">About</a>
+        <a class="nav__link" href="#">Work</a>
+        <a class="nav__link" href="#">Contact</a>
+    </nav>
+</header>
+<div style="height: 500px;background-color: red;width: 100%"><h1>Hello</h1></div>
+<div style="height: 500px;background-color: green;width: 100%"><h1>World</h1></div>
+</body>
+</html>
